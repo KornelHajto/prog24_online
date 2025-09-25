@@ -48,9 +48,39 @@ function generateFields() {
         stepCounter.id = `counter-${id}`
         element.appendChild(stepCounter)
         element.className = `${element.className} bg-red-400 hover:bg-red-300`
+        
+        document.getElementById(`slot-${id}`)
+        const timerCounter = document.createElement("div")
+        timerCounter.className = "absolute right-0 top-0 pointer-events-none"
+        timerCounter.innerText = "90"
+        timerCounter.id = `timer-${id}`
+        element.appendChild(timerCounter)
     }
     return true
 }
+
+function timerHandler(){
+    if(win){return false}
+    for (let i = 0; i < 7; i++) {
+        for(let k = 0; k < 7; k++){
+            const counter = document.getElementById(`timer-${k+i*7}`)
+            const sign = document.getElementById(`sign-${k+i*7}`)
+            if(!counter){continue}
+            if(sign.innerText == ""){continue}
+            
+            const count = Number(counter.innerText)-1
+            if(count == 0){
+                counter.innerText = "90"
+                
+                sign.innerText = ""
+            }else{
+                counter.innerText = count
+            }            
+        }
+    }
+    setTimeout(timerHandler, 1000)
+}
+timerHandler()
 
 function selectField(id){
     if(win){return false}
