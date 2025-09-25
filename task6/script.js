@@ -1,4 +1,4 @@
-function getInputValue() {
+function orderCharacters() {
     let data = document.getElementById('inputField').value
     fvg(data);
 }
@@ -15,5 +15,5 @@ for (let i = 0; i < data.length; i++) {
 
 }
 
-document.getElementById('output').value = "A megvaltoztatott sorrend"+uppercase + lowercase;
+document.getElementById('output').innerHTML = "A megvaltoztatott sorrend: <b>"+uppercase + lowercase+"</b>";
 }
