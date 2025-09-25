@@ -1,20 +1,34 @@
 function checkValid(event) {
     event.preventDefault();
-    const szamString = document.getElementById('szamString').value;
-    const k = parseInt(document.getElementById('k').value);
+    const szamString =  document.getElementById('szamString').value;
+    let k = parseInt(document.getElementById('k').value);
 
-    result = '';
-    if(isNaN(k)) {
-        result = 'Hiba: k nem egy szám!';
-    } else if(k < 0) {
-        result = 'Hiba: k nem lehet negatív!';
+    let halom = [];
+    for (let i = 0; i < szamString.length; i++) {
+        let szam = szamString[i];
+        while (k > 0 && halom.length > 0 && halom[halom.length - 1] > szam) {
+            halom.pop();
+            k--;
+        }
+        halom.push(szam);
     }
 
-    if(k == 0){
-        result = szamString;
-    } else if (k >= szamString.length) {
-        result = '0';
+    while (k>0 && halom.length >0){
+        halom.pop();
+        k--;
     }
 
-    document.getElementById('eredmeny').innerText = result;
+    while (halom.length > 1 && halom[0] === '0'){
+        halom.shift()
+    }
+
+
+    if(halom.length === 0) {
+        document.getElementById('eredmeny').innerHTML = '0';
+    }
+    else{
+        let vegleges = parseInt(halom.join('')).toString();
+        document.getElementById('eredmeny').innerHTML = vegleges;
+    }
+    
 }
