@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PindurPandurok megoldasa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-sidebar">
+            <h3>Pindúr Pandúrok</h3>
+            <h3>Feladatok</h3>
+            
+            <div class="button-container">
+                <button class="nav-button active" onclick="loadTask('task1/index.html', this)">1. Feladat</button>
+            </div>
+            
+            <div class="button-container">
+                <button class="nav-button" onclick="loadTask('task2/index.html', this)">2. Feladat</button>
+            </div>
+            
+            <div class="button-container">
+                <button class="nav-button" onclick="loadTask('task3/index.html', this)">3. Feladat</button>
+            </div>
+            
+            <div class="button-container">
+                <button class="nav-button" onclick="loadTask('task4/index.html', this)">4. Feladat</button>
+            </div>
+            
+            <div class="button-container">
+                <button class="nav-button" onclick="loadTask('task5/index.html', this)">5. Feladat</button>
+            </div>
+            
+            <div class="button-container">
+                <button class="nav-button" onclick="loadTask('task6/index.html', this)">6. Feladat</button>
+            </div>
+            
+            <div class="button-container">
+                <button class="nav-button" onclick="loadTask('task7/index.html', this)">7. Feladat</button>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="loading" id="loading">Betöltés...</div>
+            <iframe id="taskFrame" class="task-frame" src="task1/index.html">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        function loadTask(taskPath, buttonElement) {
+            const allButtons = document.querySelectorAll('.nav-button');
+            allButtons.forEach(button => button.classList.remove('active'));
+            
+            buttonElement.classList.add('active');
+            
+            const loading = document.getElementById('loading');
+            const iframe = document.getElementById('taskFrame');
+            
+            loading.style.display = 'block';
+        
+            iframe.src = taskPath;
+            
+            iframe.onload = function() {
+                loading.style.display = 'none';
+            };
+        }
+    </script>
+</body>
+</html>

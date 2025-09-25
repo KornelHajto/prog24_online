@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Feladat</title>
+</head>
+<body>
+    <h1>3. Feladat</h1>
+    <p>Adott egy nemnegatív egész szám, ami decimális számjegyekből álló sztring, valamint egy egész szám k. Pontosan k darab számjegyet törölnöd kell a számjegyekből álló sztringből úgy, hogy a megmaradó szám a lehető legkisebb legyen. A törlés után kapott számból el kell távolítani az összes felesleges bevezető nullát. Ha a törlés után már nem marad számjegy, akkor az eredménynek 0-t kell kiírni.</p>
+    <form id="stringForm" onsubmit="checkValid(event)">
+        <label for="szamString">Számok stringje:</label>
+        <input type="string" id="szamString" name="szamString" defaultValue="" placeholder="0-9 karakterekből álló string"><br><br>
+        <label for="k">k:</label>
+        <input type="number" id="k" name="k" defaultValue=""><br><br>
+
+        <button type="submit">Ellenőrzés</button>
+    </form>
+    <p id="eredmeny"></p>
+    <script src="stringScript.js"></script>
+</body>
+</html>

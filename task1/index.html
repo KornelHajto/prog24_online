@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Feladat</title>
+</head>
+<body>
+    <h1>1. Feladat</h1>
+    <p>El dönteni, hogy egy (, ), * karakterekből álló S string érvényes-e. A * jelentése lehet (, ) vagy üres.</p>   
+    <form id="stringForm" onsubmit="checkValid(event)">
+        <label for="bemenetiString">Bemenet:</label>
+        <input type="string" id="bemenetiString" name="bemenetiString" defaultValue="" placeholder="(, ), * karakterekből álló string"><br><br>
+        <button type="submit">Ellenőrzés</button>
+    </form>
+    <p id="eredmeny"></p>
+    <script src="stringScript.js"></script>
+</body>
+</html>
