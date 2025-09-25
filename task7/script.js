@@ -6,8 +6,9 @@ let isSwitchMode = false
 
 function startGame() {
     current = "X"
+    lastStep = null
+    win = false
     generateFields()
-
 }
 
 function randomIntFromInterval(min, max) {
@@ -17,7 +18,9 @@ function randomIntFromInterval(min, max) {
 function generateFields() {
     const sizeX = 7
     const sizeY = 7
+
     let fields = []
+    document.getElementById("field").innerHTML = ""
     for (let i = 0; i < sizeX; i++) {
         fields[i] = []
         for(let k = 0; k < sizeY; k++){
