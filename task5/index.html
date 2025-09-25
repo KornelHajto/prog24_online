@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Feladat</title>
+</head>
+<body>
+    <h1>5. Feladat</h1>
+    <p>Függvényt, amely az Ohm törvény képlete alapján számolja ki a hiányzó értéket.</p>
+    <form id="ohmForm" onsubmit="calculateOhm(event)">
+        <label for="u">Feszültség (U):</label>
+        <input type="string" id="u" name="feszultseg" min="0" defaultValue=""><br><br>
+
+        <label for="i">Áramerősség (I):</label>
+        <input type="string" id="i" name="aramerosseg" min="0" defaultValue=""><br><br>
+
+        <label for="r">Ellenállás (R):</label>
+        <input type="string" id="r" name="ellenallas" min="0" defaultValue=""><br><br>
+
+        <button type="submit">Számolás</button>
+    </form>
+    <p id="eredmeny"></p>
+    <script src="ohmScript.js"></script>
+</body>
+</html>
