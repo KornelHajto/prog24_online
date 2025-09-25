@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Tasks Navigator</title>
+</head>
+<body>
+    <div style="display: flex; height: 100vh;">
+        <div style="width: 200px; background-color: #f0f0f0; padding: 15px; overflow-y: auto;">
+            <h3>Tasks</h3>
+            
+            <div style="margin-bottom: 10px;">
+                <button onclick="loadTask('task1/index.html')" style="width: 100%; padding: 8px;">Task 1</button>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <button onclick="loadTask('task2/index.html')" style="width: 100%; padding: 8px;">Task 2</button>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <button onclick="loadTask('task3/index.html')" style="width: 100%; padding: 8px;">Task 3</button>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <button onclick="loadTask('task4/index.html')" style="width: 100%; padding: 8px;">Task 4</button>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <button onclick="loadTask('task5/index.html')" style="width: 100%; padding: 8px;">Task 5</button>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <button onclick="loadTask('task6/index.html')" style="width: 100%; padding: 8px;">Task 6</button>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <button onclick="loadTask('task7/index.html')" style="width: 100%; padding: 8px;">Task 7</button>
+            </div>
+        </div>
+        
+        <div style="flex: 1;">
+            <iframe id="taskFrame" src="task1/index.html" style="width: 100%; height: 100%; border: none;">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        function loadTask(taskPath) {
+            document.getElementById('taskFrame').src = taskPath;
+        }
+    </script>
+</body>
+</html>
