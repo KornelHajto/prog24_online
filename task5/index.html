@@ -10,13 +10,13 @@
     <p>Függvényt, amely az Ohm törvény képlete alapján számolja ki a hiányzó értéket.</p>
     <form id="ohmForm" onsubmit="calculateOhm(event)">
         <label for="u">Feszültség (U):</label>
-        <input type="string" id="u" name="feszultseg" min="0" defaultValue=""><br><br>
+        <input type="string" id="u" name="feszultseg" min="0" defaultValue="" placeholder="Feszültség (U)"><br><br>
 
         <label for="i">Áramerősség (I):</label>
-        <input type="string" id="i" name="aramerosseg" min="0" defaultValue=""><br><br>
+        <input type="string" id="i" name="aramerosseg" min="0" defaultValue="" placeholder="Áramerősség (I)"><br><br>
 
         <label for="r">Ellenállás (R):</label>
-        <input type="string" id="r" name="ellenallas" min="0" defaultValue=""><br><br>
+        <input type="string" id="r" name="ellenallas" min="0" defaultValue="" placeholder="Ellenállás (R)"><br><br>
 
         <button type="submit">Számolás</button>
     </form>

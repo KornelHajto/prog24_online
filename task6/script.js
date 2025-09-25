@@ -15,5 +15,5 @@ for (let i = 0; i < data.length; i++) {
 
 }
 
-document.getElementById('output').innerHTML = "A megvaltoztatott sorrend: <b>"+uppercase + lowercase+"</b>";
+document.getElementById('output').innerHTML = "A megváltoztatott sorrend: <b>"+uppercase + lowercase+"</b>";
 }

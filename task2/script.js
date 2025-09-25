@@ -14,7 +14,7 @@ function Calculate(){
     var input = document.getElementById("inputField").value;
     
     if (!input.trim()) {
-        alert("Kerlek adj meg egy nem ures szoveget!");
+        alert("Kérlek adj meg egy nem üres szöveget!");
         return;
     }
 
